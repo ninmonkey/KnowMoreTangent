@@ -1,0 +1,23 @@
+{
+    "folders": [ // new: 2023-05-08
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "editor.fontFamily": "'cascadia code pl', 'cascadia code mono', monospace",
+        "[powershell]": {
+            "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+            "editor.semanticHighlighting.enabled": false,
+            "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+            "editor.fontSize": 20
+        },
+        "[xml]": {
+            "editor.maxTokenizationLineLength": 800000,
+        },
+        "markdown.extension.tableFormatter.normalizeIndentation": true,
+        "[jsonc][json]": {
+            "editor.fontSize": 12
+        }
+    }
+}
