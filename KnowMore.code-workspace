@@ -10,14 +10,35 @@
             "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
             "editor.semanticHighlighting.enabled": false,
             "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
-            "editor.fontSize": 20
+            "editor.fontSize": 20,
+            "editor.fontSize": 18
         },
         "[xml]": {
             "editor.maxTokenizationLineLength": 800000,
         },
         "markdown.extension.tableFormatter.normalizeIndentation": true,
         "[jsonc][json]": {
-            "editor.fontSize": 12
-        }
+            "editor.fontSize": 16
+        },
+        "workbench.colorCustomizations": {
+            "activityBar.activeBackground": "#c9a5d0",
+            "activityBar.background": "#c9a5d0",
+            "activityBar.foreground": "#15202b",
+            "activityBar.inactiveForeground": "#15202b99",
+            "activityBarBadge.background": "#7e7442",
+            "activityBarBadge.foreground": "#e7e7e7",
+            "commandCenter.border": "#15202b99",
+            "sash.hoverBorder": "#c9a5d0",
+            "statusBar.background": "#b583bf",
+            "statusBar.foreground": "#15202b",
+            "statusBarItem.hoverBackground": "#a161ae",
+            "statusBarItem.remoteBackground": "#b583bf",
+            "statusBarItem.remoteForeground": "#15202b",
+            "titleBar.activeBackground": "#b583bf",
+            "titleBar.activeForeground": "#15202b",
+            "titleBar.inactiveBackground": "#b583bf99",
+            "titleBar.inactiveForeground": "#15202b99"
+        },
+        "peacock.color": "#b583bf"
     }
 }
