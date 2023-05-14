@@ -1,4 +1,4 @@
-name: Push to GitLogger # [template generated on 2023-05-20] <https://gitlogger.com/>
+name: Push to GitLogger # [template generated on 2023-05-20] <https://gitlogger.com/> <https://github.com/GitLogging/GitLoggerAction>
 run-name: ${{ github.actor }} Push to GitLogger 🚀📊
 on: [push]
 jobs:

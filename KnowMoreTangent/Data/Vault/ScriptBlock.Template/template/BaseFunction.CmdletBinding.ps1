@@ -21,7 +21,8 @@ function Template-WithoutPipeline {
 
         # Expose additional settings, ie: it's **kwargs
         [ArgumentCompletions(
-            '@{ SomeSetting = "blank" }'
+            '@{ SomeSetting = "blank" }',
+            '@{ ExportRoot = Join-Path $Env:UserProfile ''nin/config.json'' }'
         )]
         [Alias('Kwargs')]
         [Parameter()][hashtable]$Options = @{}
