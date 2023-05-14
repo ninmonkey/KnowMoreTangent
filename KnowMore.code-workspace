@@ -11,7 +11,7 @@
             "editor.semanticHighlighting.enabled": false,
             "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
             "editor.fontSize": 20,
-            "editor.fontSize": 18
+            "editor.fontSize": 18,
         },
         "[xml]": {
             "editor.maxTokenizationLineLength": 800000,

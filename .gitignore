@@ -6,6 +6,6 @@
 # Compare variations:
 # **/*/.import/*
 # **/*/.import/
-# .import/*
+# **/*.import/*
 # **/*/.import/*
 # **/*/.import/*/**/*.yml
