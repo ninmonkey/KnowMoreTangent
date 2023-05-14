@@ -1,0 +1,34 @@
+[
+    /*
+    thread (should be a sticky in the channel) <https://discord.com/channels/180528040881815552/446531919644065804/1005277211659604059>
+
+
+    📌 Install
+    Pwsh> Install-Module -Scope CurrentUser -AllowPrerelease EditorServicesCommandSuite
+
+    📌 Add to your profile
+    Pwsh> Import-CommandSuite
+
+    📌 Add to VSCode keybindings.json
+    🔸 Press Ctrl + Shift + P
+    🔸 Type keyboard json
+    🔸 Select Preferences: Open Keyboard Shortcuts (JSON)
+    🔸 Add the following:
+*/
+    {
+        "key": "ctrl+.",
+        "command": "PowerShell.InvokeRegisteredEditorCommand",
+        "args": {
+            "commandName": "Invoke-DocumentRefactor"
+        },
+        "when": "editorLangId == 'powershell'"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "PowerShell.InvokeRegisteredEditorCommand",
+        "args": {
+            "commandName": "ConvertTo-SplatExpression"
+        },
+        "when": "editorLangId == 'powershell'"
+    },
+]

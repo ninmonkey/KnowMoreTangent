@@ -1,0 +1,90 @@
+{
+    /*
+    Segment: Important core config
+    If you want autocomplete when editing the foo.types.ps1xml and foo.format.ps1xml files, I have the xml config here
+        https://ninmonkeys.com/blog/2022/05/01/viewing-default-settings-in-vs-code/#Suggested_PowerShell_Config
+    */
+    "powershell.codeFormatting.useConstantStrings": true,
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.codeFormatting.useCorrectCasing": true,
+    "powershell.codeFormatting.alignPropertyValuePairs": true,
+    "powershell.codeFormatting.addWhitespaceAroundPipe": true,
+    "[powershell][json]": {
+        "editor.formatOnSave": true,
+    },
+    /*
+
+    ### segment: Chris's config
+
+        source: <https://discord.com/channels/180528040881815552/538463582740807731/1103344977897083041>
+
+            I set up .vscode settings to support the rules I'm going to use in PSScriptAnalyzerSettings.psd1:
+            https://github.com/indented-automation/Indented.Net.IP/blob/adds-vscode-config/.vscode/settings.json
+            In the root of my repo, I configure the configurable style rules to agree with these settings:
+            https://github.com/indented-automation/Indented.Net.IP/blob/adds-vscode-config/PSScriptAnalyzerSettings.psd1
+            Finally, I use Pester to validate by adding a wrapper that runs the rules and tests the outcome for all content in my repository:
+            https://github.com/indented-automation/Indented.Net.IP/blob/adds-vscode-config/Indented.Net.IP/tests/PSScriptAnalyzer.tests.ps1
+
+
+            I've done something to break the test result parser in my CI pipeline, but you can see the output from Invoke-Pester here:
+
+            https://ci.appveyor.com/project/indented-automation/indented-net-ip/builds/46951640
+
+            Which shows a bunch of style failures created by that PSScriptAnalyzerSettings.tests.ps1 file
+    */
+    /*
+
+    ### segment: Full inline example from my blog post
+
+    */
+    // this file is almost the same as
+    //<https://github.com/ninmonkey/dotfiles_git/blob/614fc06cd8b989e8438cba6cae648605fae2491a/vscode/User/nin10/Code/minimum-config/powershell.settings.json>
+    "workbench.settings.editor": "json", // good for editing, [ctrl+,]
+    // will by default open your global settings as JSON instead of UI
+    // improve code quality
+    "powershell.codeFormatting.autoCorrectAliases": true,
+    "powershell.codeFormatting.useConstantStrings": true,
+    "powershell.codeFormatting.useCorrectCasing": true,
+    // I have this enabled for most languages
+    "editor.formatOnSave": true,
+    // some people are pretty polarized on which style to use,
+    // So I have both styles and variants to try
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?", // combine $ and -
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?", // causes splat-expression etc to break
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?", // break on $ and -
+    "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?", // combine $ and -
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+    // If you don't like snippets, you can disable them for as specific language, leaving the others
+    // the blog isn't rendering the next line, it should say
+    // "[power shell]" as the key If you don't like snippets, you can disable them for as specific language, leaving the others
+    "[powershell]": {
+        "editor.semanticHighlighting.enabled": false,
+        "editor.snippetSuggestions": "bottom",
+        "editor.snippetSuggestions": "none",
+        "files.encoding": "utf8bom",
+        "files.trimTrailingWhitespace": true,
+    },
+    /*
+        Adds autocompletion and validation to any .Format.ps1xml and .Types.ps1xml files.
+        It uses the addon: 'redhat.vscode-xml'
+    */
+    "editor.suggest.preview": true, // interesting but can be jarring
+    "powershell.integratedConsole.suppressStartupBanner": true,
+    "powershell.powerShellDefaultVersion": "PowerShell (x64)",
+    "powershell.promptToUpdatePowerShell": false,
+    // Specifies the path to a PowerShell Script Analyzer settings file. To override the default settings for all projects, enter an absolute path, or enter a path relative to your workspace.
+    "powershell.scriptAnalysis.settingsPath": "C:/Users/monkey/Documents/2021/dotfiles_git/powershell/PSScriptAnalyzerSettings.psd1",
+    // "powershell.scriptAnalysis.settingsPath
+    // Autocomplete and a schema/validation for
+    // powershell's  "types.ps1xml" and "format.ps1xml" files
+    "xml.fileAssociations": [
+        {
+            "systemId": "https://raw.githubusercontent.com/PowerShell/PowerShell/master/src/Schemas/Format.xsd",
+            "pattern": "**/*.Format.ps1xml"
+        },
+        {
+            "systemId": "https://raw.githubusercontent.com/PowerShell/PowerShell/master/src/Schemas/Types.xsd",
+            "pattern": "**/*.Types.ps1xml"
+        }
+    ],
+}
