@@ -1,0 +1,13 @@
+- title:
+  fileContents: |
+    # Why did I use 'folder/*' verses 'folder/' ?
+    # the first version works better in VsCode
+    # VsCode ignores it,
+    # The latter is invisible in vscode because of ignore
+    #
+    # Compare variations:
+    # **/*/.import/*
+    # **/*/.import/
+    # .import/*
+    # **/*/.import/*
+    # **/*/.import/*/**/*.yml
