@@ -1,0 +1,15 @@
+---
+links to old data locations, before several moves
+random files
+search /w ES , there's some good and some bad
+---
+
+- locations:
+  - path: C:/Users/cppmo_000/SkyDrive/Documents/2022/Pwsh/buffer
+  - path: H:\data\2023\dump.buffer.offline
+    desc: stuff that may have been in buffer2023 but are thrown out
+  - workspaces:
+    - path: H:\data\2023\pwsh\PsModules\KnowMoreTangent\KnowMore.code-workspace
+
+- filters:
+  - query: H:\data\2023\pwsh\PsModules\KnowMoreTangent\KnowMore.code-workspace
