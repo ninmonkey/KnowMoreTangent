@@ -39,7 +39,9 @@ function SerializeStr.RgbColor.From {
         $InputObject
     )
     process {
-        $o.RGB | Join-String -f '#{0:x}'
+        # assert
+        if ( [string]::IsNullOrWhiteSpace($InputObject) ) { return }
+        $InputObject.RGB | Join-String -f '#{0:x}'
     }
 }
 
