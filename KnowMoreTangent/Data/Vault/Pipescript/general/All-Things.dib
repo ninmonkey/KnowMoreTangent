@@ -1,0 +1,61 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"pwsh","items":[{"aliases":[],"languageName":"pwsh","name":"pwsh"}]}}
+
+#!markdown
+
+## Docs:
+
+-   [Pipescript tests for `all`](https://github.com/StartAutomating/PipeScript/blob/80fa0020a4680763a6b5ef94943bcef78785d03d/Tests/All.tests.ps1#L44)
+
+#!pwsh
+
+Import-Module Pipescript -ea 'stop' -PassThru
+$PSVersionTable.PSVersion | Join-String
+
+function CsvFirst {
+    # sugar to shorten cells
+    param( 
+        [int]$Count = 15, [string]$Label )
+    $Input  | Select -First $Count | Join-String -sep ', ' -op $Label
+}
+
+#!pwsh
+
+. {
+    $numbers = 1..100
+    all $numbers { ($_ % 2) -eq 1 } are odd
+    all $numbers { ($_ % 2) -eq 0 } are even
+}.Transpile() | Out-Null
+
+.> { all even $numbers } | CsvFirst
+.> { all odd $numbers  } | CsvFirst
+
+#!pwsh
+
+$all ??= @{} 
+$all.Functions ??=    .> { all functions }
+$all.Aliases ??=      .> { all aliases }
+$all.Applications ??= .> { all applications }
+$all.Things ??=       .> { all things }
+
+#!pwsh
+
+$all.Functions    | CsvFirst
+$all.Aliases      | CsvFirst
+$all.Applications | CsvFirst
+
+#!pwsh
+
+$longest_Key = $all.Keys | Measure-Object -prop Length -max | % Maximum
+foreach($kind in $all.Keys) { 
+    $prefix = ($kind).ToString().PadRight( $longest_Key, ' ')
+    $all[ $kind ] | Select -first 10 | Join-String -sep ', ' -op "${Prefix}: "
+}
+
+#!pwsh
+
+function mallard( 
+    [switch]$Quack ) { $quack } 
+
+.> { all functions that quack are ducks }
