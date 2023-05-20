@@ -51,9 +51,12 @@ function Get-NoMore {
         [Parameter(Mandatory, Position = 1)]$Name
     )
 
-
+    throw 'not implemented'
     $InformationPreference = 'Continue'
     '::NoMore: { stash: {0}, key: {1} }' -f @(
-        $
+
+        $Name
+        $Key
+
     ) | Write-Information
 }
