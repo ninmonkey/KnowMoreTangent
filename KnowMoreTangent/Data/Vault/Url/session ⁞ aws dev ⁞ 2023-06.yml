@@ -1,0 +1,68 @@
+# records:
+#   - name: import Chart from 'chart.js/auto'
+#     title:  sdf
+#     url:  dsfs
+# # H:\temp\ts.error.example\.vscode\settings.json
+
+- group: Aws Amazon Cloud Lambda
+  items:
+    - url: https://aws.amazon.com/blogs/compute/extending-powershell-on-aws-lambda-with-other-services/
+      desc: Extending PowerShell on AWS Lambda with other services
+      date: 02 JUN 2022
+      tags: ['📌', 'aws', 'blog', 'whats-new']
+    - url: https://aws.amazon.com/blogs/compute/introducing-the-powershell-custom-runtime-for-aws-lambda/
+      desc: Introducing the PowerShell custom runtime for AWS Lambda
+      date: 02 may 2022
+      tags: ['📌', 'aws', 'blog', 'whats-new']
+- group: Chart.Js docs and tuts
+  items:
+    - url: https://www.chartjs.org/docs/latest/samples/information.html
+      tags: ['tut', 'intro']
+    - url: https://www.chartjs.org/docs/latest/samples/utils.html
+      desc: non-library functions that are helpful, or used to generate data for the tutorial
+    - url: https://github.com/chartjs/Chart.js/blob/master/docs/getting-started/usage.md#real-world-data
+      title: Chart.js ˃ docs ˃ getting-started ˃ usage.md
+      desc: non-library functions that are helpful, or used to generate data for the tutorial
+      tags: ['quickref', 'tut', 'intro', 'repo']
+- group: SAM CLI command line
+  items:
+    - url: https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/using-sam-cli-init.html#using-sam-cli-init-options
+      related:
+        - https://docs.aws.amazon.com/lambda/latest/dg/configuration-layers.html
+        - https://docs.aws.amazon.com/lambda/latest/dg/powershell-exceptions.html
+        - https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-docker.html
+        - https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/using-sam-cli-configure.html
+        -
+        -
+        -
+        -
+
+---
+sdfdsfds
+fdssd
+---
+
+groups:
+  - label: localdev
+    url: http://127.0.0.1:3000/doc
+  - label: localdev
+    url: http://127.0.0.1:3000/docs/
+  - label: localdev
+    url: http://127.0.0.1:3000/doc
+  - label: localdev
+    url: http://127.0.0.1:3000/doc
+  - label: localdev
+    url: http://127.0.0.1:3000/doc
+  - label: localdev
+    url: http://127.0.0.1:3000/doc
+
+group:
+  name: localhost
+  parent: gitlogger.work
+  urlList:
+    - http://localhost:4000/
+    - http://localhost:7071/ShowGitLogger?Repository=https://github.com/StartAutomating/Ugit&GraphType=Bar
+    - http://127.0.0.1:4000/GitLogger-Metrics/
+    - https://gitlogger.com/MyRepos/
+    - https://www.chartjs.org/docs/latest/charts/scatter.html
+    - http://localhost:4000/CleanTest.html

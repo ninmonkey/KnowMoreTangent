@@ -1,0 +1,30 @@
+---
+about: Doug Finke related links
+created: a
+---
+
+- group: ImportExcel
+- group: PowerShellAI
+  items:
+    - url: https://www.youtube.com/@DougFinke
+      desc: His youtube channel
+    - url: https://twitter.com/dfinke/status/1656657157717372931
+      desc: his twitter
+    - url: https://github.com/dfinke/PowerShellAI#code-editing-example
+      desc: PowerShell AI, Copilot, etc integration on the console
+      tags: ['📌', 'powershell', 'ai', 'doug-finke', 'whats-new', 'console', 'powershell', 'module']
+      nested:
+        - https://github.com/dfinke/PowerShellAI#examples
+        - https://www.youtube.com/watch?v=Aehsgtll1CA
+        - https://github.com/dfinke/PowerShellAI#copilot-at-the-powershell-console
+        - https://github.com/dfinke/PowerShellAI#demos-of-the-powershellai
+
+
+
+#       date: 02 JUN 2022
+#     - url: https://aws.amazon.com/blogs/compute/introducing-the-powershell-custom-runtime-for-aws-lambda/
+#       desc: Introducing the PowerShell custom runtime for AWS Lambda
+#       date: 02 may 2022
+#       tags: ['📌', 'aws', 'blog', 'whats-new']
+# - group: Chart.Js docs and tuts
+#   items:

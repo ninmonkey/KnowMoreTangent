@@ -1,0 +1,27 @@
+---
+about: Power Query related links, queue to read it later
+created: a
+---
+
+- group: Ben.Gribaudo
+  items:
+    - url: https://bengribaudo.com/blog/tag/power-query-m
+      tags: ['top-level', 'powerquery', '📌', 'fav']
+      nested:
+        - https://bengribaudo.com/blog/2023/02/15/7268/value-replacetype-table-column-renames-bug-warning
+        - https://bengribaudo.com/blog/2022/12/23/7130/power-query-m-primer-part25-extending-the-global-environment
+        - https://bengribaudo.com/blog/2023/01/02/7197/m-language-specification-in-review-2022
+        - https://bengribaudo.com/blog/2023/04/14/7321/on-premises-data-gateway-not-just-for-private-resource-access
+        - https://bengribaudo.com/blog/2023/04/14/7321/on-premises-data-gateway-not-just-for-private-resource-access
+        - https://bengribaudo.com/blog/2023/03/03/7292/lazy-streamed-immutable-try-building-a-table
+        - https://bengribaudo.com/blog/2023/01/23/7245/the-flair-of-a-culture-or-two
+        - https://bengribaudo.com/blog/2023/01/02/7197/m-language-specification-in-review-2022
+
+- group: learn.microsoft Power Query Docs
+  parent: [ 'learn.microsoft', 'learn.microsoft.powerquery' ]
+  link: https://learn.microsoft.com/en-us/powerquery-m/m-spec-types#type-equivalence-and-compatibility
+  nested:
+    - https://learn.microsoft.com/en-us/powerquery-m/m-spec-types#type-equivalence-and-compatibility
+    - https://learn.microsoft.com/en-us/powerquery-m/enumerations
+    - https://learn.microsoft.com/en-us/powerquery-m/value-functions
+    - https://learn.microsoft.com/en-us/powerquery-m/text-functions

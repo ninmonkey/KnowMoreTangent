@@ -1,0 +1,29 @@
+---
+about: Quick Reference of Pester and Powershell links
+created:
+---
+# records:
+#   - name: import Chart from 'chart.js/auto'
+#     title:  sdf
+#     url:  dsfs
+# # H:\temp\ts.error.example\.vscode\settings.json
+
+- group: Pester Documentation and Examples
+  items:
+    - url: https://pester.dev/docs/usage/Configuration
+      desc: New Configuration options from 5.2/3
+      tags: ['📌', 'docs', 'tut', 'reference', 'whats-new', 'powershell', 'pester']
+      nested:
+        - https://pester.dev/docs/commands/New-PesterConfiguration
+        - https://pester.dev/docs/commands/Invoke-Pester
+        - https://pester.dev/docs/usage/output
+
+
+
+#       date: 02 JUN 2022
+#     - url: https://aws.amazon.com/blogs/compute/introducing-the-powershell-custom-runtime-for-aws-lambda/
+#       desc: Introducing the PowerShell custom runtime for AWS Lambda
+#       date: 02 may 2022
+#       tags: ['📌', 'aws', 'blog', 'whats-new']
+# - group: Chart.Js docs and tuts
+#   items:

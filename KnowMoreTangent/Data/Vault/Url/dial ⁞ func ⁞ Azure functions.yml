@@ -1,0 +1,36 @@
+---
+about: Quick Reference of Pester and Powershell links
+created:
+---
+# records:
+#   - name: import Chart from 'chart.js/auto'
+#     title:  sdf
+#     url:  dsfs
+# # H:\temp\ts.error.example\.vscode\settings.json
+
+- group: stuff
+  items:
+    - url: https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-powershell?tabs=portal
+      desc: New Configuration options from 5.2/3
+      tags: ['📌', 'docs', 'cli', 'powershell', 'func']
+      nested:
+        - https://github.com/Azure/azure-functions-powershell-worker/blob/dev/docs/cmdlets/Push-OutputBinding.md
+        - https://learn.microsoft.com/en-us/azure/azure-functions/event-grid-how-tos?tabs=v2%2Cportal#local-testing-with-viewer-web-app
+        - https://learn.microsoft.com/en-us/azure/azure-functions/functions-best-practices?tabs=csharp
+        - https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-expressions-patterns
+        - https://learn.microsoft.com/en-us/azure/azure-functions/functions-bindings-storage-queue-output?pivots=programming-language-csharp&tabs=python-v2%2Cin-process%2Cextensionv5
+        - https://learn.microsoft.com/en-us/azure/azure-functions/functions-core-tools-reference?tabs=v2
+        - https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference-powershell?tabs=portal
+        - https://learn.microsoft.com/en-us/azure/azure-functions/functions-reference?tabs=blob
+        - https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings?tabs=csharp
+
+
+
+
+#       date: 02 JUN 2022
+#     - url: https://aws.amazon.com/blogs/compute/introducing-the-powershell-custom-runtime-for-aws-lambda/
+#       desc: Introducing the PowerShell custom runtime for AWS Lambda
+#       date: 02 may 2022
+#       tags: ['📌', 'aws', 'blog', 'whats-new']
+# - group: Chart.Js docs and tuts
+#   items:
