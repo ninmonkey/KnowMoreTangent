@@ -1,0 +1,1 @@
+Set-PSBreakpoint -Command 'Do-Stuff*' -Script 'foo.ps1'
