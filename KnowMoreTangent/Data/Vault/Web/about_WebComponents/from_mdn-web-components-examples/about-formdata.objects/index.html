@@ -1,0 +1,22 @@
+<div>source: https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects</div>
+
+<h1>part 1</h1>
+<script type="text/javascript">
+const formData = new FormData();
+
+formData.append("username", "Groucho");
+formData.append("accountnum", 123456); // number 123456 is immediately converted to a string "123456"
+
+// HTML file input, chosen by user
+formData.append("userfile", fileInputElement.files[0]);
+
+// JavaScript file-like object
+const content = '<q id="a"><span id="b">hey!</span></q>'; // the body of the new file…
+const blob = new Blob([content], { type: "text/xml" });
+
+formData.append("webmasterfile", blob);
+
+const request = new XMLHttpRequest();
+request.open("POST", "http://foo.com/submitform.php");
+request.send(formData);
+</script>
