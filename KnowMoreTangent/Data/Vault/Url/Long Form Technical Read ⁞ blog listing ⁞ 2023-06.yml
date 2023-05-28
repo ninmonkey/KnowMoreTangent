@@ -1,0 +1,17 @@
+---
+about: longer or  technincal reads that are more involved.
+modified: 2023-05-28
+---
+
+- group: Dotnet
+  items:
+    - url: https://devblogs.microsoft.com/dotnet/why-dotnet/
+      desc: What is .Net and why should you choose it?
+      author: .NET Team
+      date: 2023/02/14
+      tags: ['dotnet', 'csharp', 'long', '2023']
+    - url: https://devblogs.microsoft.com/dotnet/how-async-await-really-works/
+      desc: How Async/Await Really Works in C#
+      author: Stephen Toub - MSFT
+      date: 2023/03/16
+      tags: ['dotnet', 'csharp', 'long', '2023', 'async', 'await']
