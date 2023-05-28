@@ -1,5 +1,5 @@
 {
-    "folders": [ // new: 2023-05-08
+    "folders": [ // new: 2023-05-28
         {
             "path": "."
         }
@@ -12,7 +12,9 @@
             "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
             "editor.fontSize": 20,
             "editor.fontSize": 18,
+            "editor.formatOnSave": false,
         },
+        "powershell.codeFormatting.autoCorrectAliases": false, // because of fancy pants aliases
         "[xml]": {
             "editor.maxTokenizationLineLength": 800000,
         },
