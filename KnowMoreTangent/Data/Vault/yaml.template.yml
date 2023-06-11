@@ -1,0 +1,43 @@
+---
+about: list of console and GH related apps to try
+created: 2023-06
+---
+
+# values: &ref
+#   - Will be
+#   - reused below
+
+# other_values:
+#   i_am_ref: *ref
+- folder: Power Query Docs
+  items:
+    - url: https://docs.microsoft.com/en-us/power-query/
+      desc: "Power Query docs"
+      tags: ['📌', 'docs', 'reference', 'powerquery', 'microsoft']
+      nested:
+        - https://docs.microsoft.com/en-us/power-q
+
+- folder: Ungrouped
+  items:
+    - url: https://learn.microsoft.com/en-us/powerquery-m/expression-evaluate
+      title: Expression.Evaluate
+      tags: ['meta', 'eval', 'environment', '#shared', '#sections']
+      desc: Returns the result of evaluating an M expression document, with the available identifiers that can be referenced defined by environment.
+# ---
+    - url: https://learn.microsoft.com/en-us/powerquery-m/text-betweendelimiters
+      title: Text.SplitAny
+      tags: ['text', 'parse']
+      desc: Returns the portion of text between the specified startDelimiter and endDelimiter. An optional numeric startIndex indicates which occurrence of the startDelimiter should be considered. An optional list startIndex indicates which occurrence of the startDelimiter should be considered, as well as whether indexing should be done from the start or end of the input. The endIndex is similar, except that indexing is done relative to the startIndex.
+# ---
+    - url: https://learn.microsoft.com/en-us/powerquery-m/text-splitany
+      title: Text.SplitAny
+      tags: ['text', 'split', 'list']
+      desc: Returns a list of text values resulting from the splitting a text value text based on any character in the specified delimiter, separators.
+# ---
+    - url: https://learn.microsoft.com/en-us/powerquery-m/text-functions
+      desc: Text Table of Contents
+    - url: https://docs.microsoft.com/en-us/power-query/
+      desc: "Power Query docs"
+      tags: ['📌', 'docs', 'reference', 'powerquery', 'microsoft']
+      nested:
+        - https://docs.microsoft.com/en-us/power-q

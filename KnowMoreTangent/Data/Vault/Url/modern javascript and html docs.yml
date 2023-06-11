@@ -1,63 +1,80 @@
-- name: import Chart from 'chart.js/auto'
-- name: Custom HTML elements
-  link: https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#working_through_some_simple_examples
-  parent: mdn.html.elements
-- name: passing shadow root context references
-  link: https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots
-- name: shadow root with children
-  link: https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks
-- name: custom elements lifecycle
-  link: .
-- name: Web Components
-  link: https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot
-  parent: mdn
-- name:
-  link: https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot
-- name: Sending forms through Javascript
-  link: https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript#building_an_xmlhttprequest_manually
-  parent: mdn.html
-- name:
-  link: .
-- name: About ShadowRoot | mdn > Topic > Shadow Root
-  link: https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot
-  parent: mdn
-- name: Element.attachShadow | mdn > API > Shadow Root
-  link: https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow
-  parent: mdn
-- name: slot element | HTML > About > Slot
-  link: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot
-- name:
-  link: .
-- name: WebComponents | about Trinity |  customElements, shadow DOM, templates and slots
-  link: https://developer.mozilla.org/en-US/docs/Web/API/Web_components
-  tags: [ '📌' , 'toc', 'top-level-summary' ]
-- name: Using FormData and Form Controls
-  link: https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_build_custom_form_controls
-- name:
-  link: .
-- name: Fetch API | mdn about
-  parent: mdn.javascript.topic
-  link: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
-- name: Using `FormaData` objects | Mdn about
-  link: https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
-  parent: mdn.html.topic
-- name: 'About: Private class features'
-  link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields
-  parent: mdn.html
-- name: 'About: Classes'
-  link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-  parent: mdn.html
-- name: 'classes: Private features'
-  link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-  parent: mdn.html
-- name: 'classes: Private features'
-  link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-  parent: mdn.html
-- name: 'classes: Private features'
-  link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
-  parent: mdn.html
-# // # optional utils: <https://github.com/chartjs/Chart.js/tree/master/helpers>
-# //
-# // <
-# // <
-# //
+---
+About: Docs or tutorials on 'modern' web components
+Created: '2023-06-11'
+---
+
+# - folder: 'Pwsh: PowerShell Docs'
+#   desc: Official Pwsh docs for 5 to 7+
+#   tags: ['pwsh','official docs','tut']
+#   parent: 'docs.powershell'
+#   items:
+#   - name: Get-WinEvent
+#     link: https://learn.microsoft.com/en-us/powershell/scripting/samples/creating-get-winevent-queries-with-filterhashtable?view=powershell-7.4
+#     tags: ['pwsh', 'about_topics', 'docs']
+
+
+- folder: Unsorted
+  items:
+  - name: import Chart from 'chart.js/auto'
+  - name: Custom HTML elements
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#working_through_some_simple_examples
+    parent: mdn.html.elements
+  - name: passing shadow root context references
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_templates_and_slots
+  - name: shadow root with children
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks
+  - name: custom elements lifecycle
+    link: .
+  - name: Web Components
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot
+    parent: mdn
+  - name:
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Element/shadowRoot
+  - name: Sending forms through Javascript
+    link: https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript#building_an_xmlhttprequest_manually
+    parent: mdn.html
+  - name:
+    link: .
+  - name: About ShadowRoot | mdn > Topic > Shadow Root
+    link: https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot
+    parent: mdn
+  - name: Element.attachShadow | mdn > API > Shadow Root
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Element/attachShadow
+    parent: mdn
+  - name: slot element | HTML > About > Slot
+    link: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot
+  - name:
+    link: .
+  - name: WebComponents | about Trinity |  customElements, shadow DOM, templates and slots
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Web_components
+    tags: [ '📌' , 'toc', 'top-level-summary' ]
+  - name: Using FormData and Form Controls
+    link: https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_build_custom_form_controls
+  - name:
+    link: .
+  - name: Fetch API | mdn about
+    parent: mdn.javascript.topic
+    link: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+  - name: Using `FormaData` objects | Mdn about
+    link: https://developer.mozilla.org/en-US/docs/Web/API/FormData/Using_FormData_Objects
+    parent: mdn.html.topic
+  - name: 'About: Private class features'
+    link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields
+    parent: mdn.html
+  - name: 'About: Classes'
+    link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    parent: mdn.html
+  - name: 'classes: Private features'
+    link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    parent: mdn.html
+  - name: 'classes: Private features'
+    link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    parent: mdn.html
+  - name: 'classes: Private features'
+    link: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    parent: mdn.html
+  # // # optional utils: <https://github.com/chartjs/Chart.js/tree/master/helpers>
+  # //
+  # // <
+  # // <
+  # //

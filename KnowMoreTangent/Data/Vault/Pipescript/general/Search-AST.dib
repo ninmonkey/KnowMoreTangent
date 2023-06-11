@@ -1,0 +1,83 @@
+#!meta
+
+{"kernelInfo":{"defaultKernelName":"csharp","items":[{"aliases":[],"name":"csharp"},{"aliases":[],"languageName":"pwsh","name":"pwsh"}]}}
+
+#!markdown
+
+## Docs:
+
+-
+
+#!pwsh
+
+# Import-Pipescript -passthru -ea 'stop'
+
+# $target =  gi -ea 'stop' 'H:\data\2023\pwsh\PsModules\KnowMoreTangent\KnowMoreTangent\Data\Vault\Pipescript\general\nbutils.2023.psm1'
+# $content = get-content -raw -ea 'stop' $Target
+
+# $sb = [scriptblock]::Create( $content )
+# $sb.ToString()
+# # Search-PipeScript -InputObject $sb -AstType Function
+# # hr
+# # Search-PipeScript -InputObject $sb -AstType Variable
+
+# 0..4 | %{ 
+# } -end { 
+#     Get-Item
+# }
+# 'done'
+
+# 0..2 | %{ 
+#     Get-Item
+# }
+# 'done'
+
+#!pwsh
+
+$PathNbModules = gi -ea 'stop' 'H:\data\2023\pwsh\PsModules\KnowMoreTangent\KnowMoreTangent\Data\Vault\Pipescript\general\nbutils.2023.psm1'
+@(  Import-Module Pipescript -ea 'stop' -PassThru
+    Import-module -ea 'stop' $PathNbModules -passThru
+) | Join-String -sep ', ' { $_.Name, $_.Version -join ' = '}
+$PSVersionTable.PSVersion | Join-String -f 'Pwsh = {0}'
+
+#!pwsh
+
+Import-Module Pipescript -passthru -ea 'stop'
+$someRandomNonModulePs1 =  gi -ea 'stop' 'H:\data\2023\pwsh\PsModules\KnowMoreTangent\KnowMoreTangent\LocalData\Get-NoMoreStash.ps1'
+$content = get-content -raw -ea 'stop' $someRandomNonModulePs1
+$sb = [scriptblock]::Create( $content )
+
+Search-PipeScript -InputObject $sb -AstType Function | ft -auto
+Search-PipeScript -InputObject $sb -AstType Variable | ft -auto
+
+#!pwsh
+
+$found_func =  @(Search-PipeScript -InputObject $sb -AstType Function ) 
+$found_var = @( Search-PipeScript -InputObject $sb -AstType Variable ) 
+
+$found_func[0].Result
+    | select Name, Tokens
+    | % Tokens
+    | ?{ $_.Type -in @('Command', 'Commandparameter') } 
+
+
+$found_var[0].Result
+        | select Name, Tokens
+        | % Tokens
+        | ?{ $_.Type -in @('Command', 'Commandparameter') } 
+
+$found_func.Count
+hr
+
+$found_func[0].Result
+    | select Name, Tokens
+    | % Tokens
+    | CountOf -Out-Null
+
+#!pwsh
+
+# try export
+if($Found.Count -gt 0) {
+    $found[0].Result
+    | % Tokens | to-xl
+}

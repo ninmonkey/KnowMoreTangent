@@ -5,6 +5,10 @@ function Get-NoMoreVault {
     .notes
         maybe name like
     #>
+    [Alias(
+        'NoMore?',
+        'NoMore'
+    )]
     [Alias( # maybe name using the [SecretManagement] pattern
         'Get-NoMoreStashInfo',
         'Get-NoMoreVaultInfo'

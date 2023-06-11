@@ -1,0 +1,58 @@
+---
+about: list of console and GH related apps to try
+created: 2023-06
+---
+
+- group: GHGithubExtensions
+  desc: Extensions for the GitHub cli `gh`
+  items:
+    - url: https://github.com/charmbracelet/lipgloss
+      desc: style definitions, themes,  for TUIs
+    - url: https://github.com/charmbracelet/bubbletea/tree/master/examples
+      desc: "examples as refs for potential interactions"
+    - url: https://github.com/charmbracelet/bubbles
+      desc: "A TUI component library for Bubble Tea"
+    - url: https://github.com/charmbracelet/harmonica
+      desc: physics-based animations for springs and bouncing
+    - url: https://github.com/lrstanley/bubblezone
+      desc: enables mouse tracking, and even handling using zwj sequences
+    - url: https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests
+      desc: docs for GH Pull Request commands
+    - url: https://github.com/dlvhdr/gh-dash
+      title: "A beautiful CLI dashboard for GitHub 🚀"
+      desc: A beautiful CLI dashboard for GitHub 🚀. dlvhdr.github.io/gh-dash, https://dlvhdr.github.io/gh-dash/getting-started/keybindings/
+      img: https://user-images.githubusercontent.com/6196971/198704107-6775a0ba-669d-418b-9ae9-59228aaa84d1.gif
+    - url: https://github.com/charmbracelet/glow
+      desc: "Render markdown on the CLI, with pizzazz! 💅🏻"
+    - url: https://github.com/abhimanyu003/sttr
+      desc: "About cross-platform, cli app to perform various operations on string"
+    - url: https://github.com/muesli/termenv
+      desc: ansi escapes, maybe less than PSStyle
+    - url: https://github.com/muesli/reflow
+      desc: "ANSI-sequence-aware (ie: save) text reflow and wrapping operations"
+
+---
+section: dump
+---
+
+- some_thing: &VAR_NAME foobar
+  other_thing: *VAR_NAME
+
+# adaptiveColors: >
+# lipgloss.CompleteAdaptiveColor{
+#     Light: CompleteColor{TrueColor: "#d7ffae", ANSI256: "193", ANSI: "11"},
+#     Dark:  CompleteColor{TrueColor: "#d75fee", ANSI256: "163", ANSI: "5"},
+# }
+
+# stuff: >
+#   import "github.com/charmbracelet/lipgloss"
+
+#   var style = lipgloss.NewStyle().
+#       Bold(true).
+#       Foreground(lipgloss.Color("#FAFAFA")).
+#       Background(lipgloss.Color("#7D56F4")).
+#       PaddingTop(2).
+#       PaddingLeft(4).
+#       Width(22)
+
+#   fmt.Println(style.Render("Hello, kitty"))
