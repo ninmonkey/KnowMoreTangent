@@ -1,0 +1,2 @@
+- https://github.com/Jaykul/TerminalBlocks/blob/main/source/Generators/ModuleBuilderExtensions.ps1
+-   In effect creates reusable `CmdletBinding`s if you could subclass base behaviors
