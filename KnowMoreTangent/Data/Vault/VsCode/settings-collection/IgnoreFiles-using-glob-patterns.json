@@ -1,0 +1,188 @@
+/*
+
+## About
+
+Ignoring files helps with
+
+1] performance, by excluding files to search that you never use.
+    You may have build artifacts or big log files a subdirectory that's
+    automatically used for searching and parsing symbols
+
+2] clutter, by hiding files that you don't need to see in the file explorer
+    it cleans up symbols when using [ctrl+shift+p] or other symbol searches
+
+3] making [ctrl+shift+f] automatically exclude paths, giving you fewer, more important search results.
+
+## See also:
+
+How do I find more? Your settings dynamically build default settings, based on what extensions are installed. Meaning it's not out-of-date examples
+
+Here's a guide with a couple of important hotkeys when you're dealing with custom settings:
+    https://ninmonkeys.com/blog/2022/05/01/viewing-default-settings-in-vs-code/
+
+The big ones are:
+
+    <ctrl + shift + o>
+    <ctrl + shift + space>
+
+*/
+{
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        //
+        // custom conventions
+        //
+        "**/.export/**": true,
+        "**/.output/**": true,
+        "**/{.input,.export,.output}/*.{csv,json,jsonl,log,xlsx,zip,pbix,pbit}": true,
+    },
+    /*
+    Configure [glob patterns](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options) for excluding files and folders. For example, the File Explorer decides which files and folders to show or hide based on this setting. Refer to the `search.exclude#` setting to define search-specific excludes. Refer to the `#explorer.excludeGitIgnore` setting for ignoring files based on your `.gitignore`.
+
+        see: <https://code.visualstudio.com/docs/editor/codebasics#_find-in-selection>
+        This  is shorthand for ${WorkSpaceRoot}/example:
+            ./example
+
+        glob style
+            *  : 0-to-many
+            ?  : 1 char
+            ** : any number of path segments (even 0)
+            [] : range, 0-9
+            [!]: example.[!0-9]
+            {} : group pattern
+                {**\/*.html,**\/*.txt}
+
+                had to add \\ escapes because this is json
+
+    */
+    "files.exclude": {
+        "**/*.lnk": true,
+        "**/.git": true, // I double checked, yes, this folder is a default value, so files must not be exclusive
+        // misc binaries
+        "**/*.exe": true,
+        "**/*.pbix": true,
+        "**/*.zip": true,
+        "**/*.cache": true,
+        "**/*.aws-sam": true, // this makes the pattern invisible
+        // Python
+        "**/*.py[co]": true,
+        "**/__pycache__": true,
+        "**/.mypy_cache": true,
+        // javascript
+        "**/node_modules": true,
+        // virtual env
+        "**/venv/*": true,
+        "**/*.js": { // example taken from the docs or blog I think ?
+            // they altered the conditional syntax a couple times so I should confirm this
+            // you can make min.js files disappear, if there's no *.js
+            // otherwise when there's only .min.js, show it
+            // you can do the typescript equivalent
+            "when": "$(basename).min.js",
+            "exclude": false,
+        },
+        "**/.output/*.{csv,log,xlsx}": true,
+        "**/*.{exe,zip,7z,xlsx}": true,
+        "**/.export/*.json": true,
+        "**/.input/*.json": true,
+        // "**/venv": true,
+        "**/.export/*.{csv,json,jsonl,log,xlsx,zip,pbix,pbit}": true,
+        // # top level
+        "{.output,.export,.input}": true,
+        // todo: verify this works correctly
+        "**/{.input,.export,.output}/*.{csv,json,jsonl,log,xlsx,zip,pbix,pbit}": true,
+        // "**/*.js": false,
+    },
+    /*
+
+  ###### SubSect: Files ⇢ Search.Exclude
+
+      */
+    // Controls the positioning of the actionbar on rows in the search view.
+    //  - auto: Position the actionbar to the right when the search view is narrow, and immediately after the content when the search view is wide.
+    //  - right: Always position the actionbar to the right.
+    "search.actionsPosition": "right",
+    // Controls whether the search results will be collapsed or expanded.
+    //  - auto: Files with less than 10 results are expanded. Others are collapsed.
+    //  - alwaysCollapse
+    //  - alwaysExpand
+    "search.collapseResults": "alwaysExpand",
+    // Configure glob patterns for excluding files and folders in fulltext searches and quick open. Inherits all glob patterns from the `files.exclude` setting. Read more about glob patterns [here](https://code.visualstudio.com/docs/editor/codebasics#_advanced-search-options).
+    "search.exclude": {
+        "**/{.input,.export,.output}/*.{csv,json,jsonl,log,xlsx,zip,pbix,pbit}": true,
+        "**/*.log": true,
+        "**/*.lnk": true,
+        "**/Output/": true,
+        "**/node_modules": true,
+        "**/{.input,.export,.output}/*.log": true,
+        "**/{.input,.export,.output}/*.json": true,
+        "**/*.export/*.log": true, // should be redundant
+        // "**/*.export/*.json": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/.aws-sam/": true,
+        "**/.parcel-cache": true
+    },
+    // Controls whether to use global `.gitignore` and `.ignore` files when searching for files.
+    "git.repositoryScanIgnoredFolders": [
+        "node_modules"
+        /*
+        List of folders that are ignored while scanning for Git repositories when #git.autoRepositoryDetection# is set to true or subFolders.
+        */
+    ],
+    "git.ignoredRepositories": [], //# new git settings
+    // another 200+ "git.*" and "gitlens.*"
+    "search.useGlobalIgnoreFiles": true,
+    // Controls whether to use `.gitignore` and `.ignore` files when searching for files.
+    "search.useIgnoreFiles": true,
+    "explorer.excludeGitIgnore": true, /* warning: is no longer visible in editor */
+    // Controls whether to follow symlinks while searching.
+    "search.followSymlinks": true,
+    // When enabled, the searchService process will be kept alive instead of being shut down after an hour of inactivity. This will keep the file search cache in memory.
+    "search.maintainFileSearchCache": false,
+    // Controls the maximum number of search results, this can be set to `null` (empty) to return unlimited results.
+    // new <https://code.visualstudio.com/updates/v1_58#_search-max-results-setting>
+    "search.maxResults": 20000,
+    // Controls where new `Search: Find in Files` and `Find in Folder` operations occur: either in the sidebar's search view, or in a search editor
+    //  - view: Search in the search view, either in the panel or sidebar.
+    //  - reuseEditor: Search in an existing search editor if present, otherwise in a new search editor.
+    //  - newEditor: Search in a new search editor.
+    "search.mode": "view",
+    // Controls sorting order of editor history in quick open when filtering.
+    //  - default: History entries are sorted by relevance based on the filter value used. More relevant entries appear first.
+    //  - recency: History entries are sorted by recency. More recently opened entries appear first.
+    "search.quickOpen.history.filterSortOrder": "default",
+    // Whether to include results from recently opened files in the file results for Quick Open.
+    "search.quickOpen.includeHistory": true,
+    // Whether to include results from a global symbol search in the file results for Quick Open.
+    "search.quickOpen.includeSymbols": false,
+    // The default number of surrounding context lines to use when creating new Search Editors. If using `search.searchEditor.reusePriorSearchConfiguration`, this can be set to `null` (empty) to use the prior Search Editor's configuration.
+    "search.searchEditor.defaultNumberOfContextLines": 1,
+    // Configure effect of double clicking a result in a search editor.
+    //  - selectWord: Double clicking selects the word under the cursor.
+    //  - goToLocation: Double clicking opens the result in the active editor group.
+    //  - openLocationToSide: Double clicking opens the result in the editor group to the side, creating one if it does not yet exist.
+    "search.searchEditor.doubleClickBehaviour": "openLocationToSide",
+    "search.searchEditor.doubleClickBehaviour": "goToLocation",
+    // When enabled, new Search Editors will reuse the includes, excludes, and flags of the previously opened Search Editor.
+    "search.searchEditor.reusePriorSearchConfiguration": true,
+    // Search all files as you type.
+    "search.searchOnType": true,
+    // When `search.searchOnType` is enabled, controls the timeout in milliseconds between a character being typed and the search starting. Has no effect when `search.searchOnType` is disabled.
+    "search.searchOnTypeDebouncePeriod": 300,
+    // Update the search query to the editor's selected text when focusing the search view. This happens either on click or when triggering the `workbench.views.search.focus` command.
+    "search.seedOnFocus": false,
+    "search.seedOnFocus": true,
+    "search.showLineNumbers": false,
+    // Search case-insensitively if the pattern is all lowercase, otherwise, search case-sensitively.
+    "search.smartCase": true,
+    // Controls sorting order of search results.
+    //  - default: Results are sorted by folder and file names, in alphabetical order.
+    //  - fileNames: Results are sorted by file names ignoring folder order, in alphabetical order.
+    //  - type: Results are sorted by file extensions, in alphabetical order.
+    //  - modified: Results are sorted by file last modified date, in descending order.
+    //  - countDescending: Results are sorted by count per file, in descending order.
+    //  - countAscending: Results are sorted by count per file, in ascending order.
+    "search.sortOrder": "modified",
+}

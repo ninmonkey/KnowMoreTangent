@@ -1,0 +1,90 @@
+/*
+
+## About
+
+Settings that might help reduce delays that add up on larger projects.
+You can modify most of these per-language
+
+## See also:
+
+How do I find more? Your settings dynamically build default settings, based on what extensions are installed. Meaning it's not out-of-date examples
+
+Here's a guide with a couple of important hotkeys when you're dealing with custom settings:
+    https://ninmonkeys.com/blog/2022/05/01/viewing-default-settings-in-vs-code/
+
+The big ones are:
+
+    <ctrl + shift + o>
+    <ctrl + shift + space>
+
+*/
+{
+    /*
+    part1:
+        Autoformatting save, on debug, and auto-running pester tests
+    */
+    // Specifies to search for references only within open documents instead of all workspace files. An alternative to `powershell.enableReferencesCodeLens` that allows large workspaces to support some references without the performance impact.
+    "powershell.analyzeOpenDocumentsOnly": false,
+    "[powershell]": {
+        "debug.saveBeforeStart": "allEditorsInActiveGroup",
+        "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+        "debug.saveBeforeStart": "none",
+        "editor.formatOnSaveMode": "modificationsIfAvailable",
+        "editor.formatOnSaveMode": "file",
+        "debug.saveBeforeStart": "none",
+        "debug.saveBeforeStart": "allEditorsInActiveGroup",
+        "editor.formatOnSave": true,
+        "editor.formatOnType": false,
+        "editor.formatOnPaste": false,
+        "editor.defaultFormatter": "ms-vscode.powershell",
+        "editor.snippets.codeActions.enabled": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll": false,
+            "source.organizeImports": false
+        },
+    },
+    // global only settings:
+    "notebook.formatOnSave.enabled": false,
+    "pester.autoDebugOnSave": false,
+    "pester.autoRunOnSave": false,
+    "pester.testFilePath": [
+        "**/*.[tT]ests.[pP][sS]1"
+    ],
+    /*
+
+    part2:
+        ignoring files that should never parse, like  most of the time
+        you don't want to parse .node_modules or other build artifacts
+        or parsing log files
+
+    For examples, check out the file named:
+
+        IgnoreFiles-using-glob-patterns.json
+
+    */
+    // Enables real-time script analysis using [PSScriptAnalyzer](https://github.com/PowerShell/PSScriptAnalyzer) that populates the [Problems view](command:workbench.panel.markers.view.focus).
+    "powershell.scriptAnalysis.enable": true,
+    "files.watcherExclude": {
+        // ...
+    },
+    "files.exclude": {
+        // ...
+    },
+    // Specifies whether the extension loads [PowerShell profiles](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_profiles). Note that the extension's "Current Host" profile is `Microsoft.VSCode_profile.ps1`, which will be loaded instead of the default "Current Host" profile of `Microsoft.PowerShell_profile.ps1`. Use the "All Hosts" profile `profile.ps1` for common configuration.
+    "powershell.enableProfileLoading": true,
+    // Specifies if Code Lenses are displayed above function definitions, used to show the number of times the function is referenced in the workspace and navigate to those references. Large workspaces may want to disable this setting if performance is compromised. See also `powershell.analyzeOpenDocumentsOnly`.
+    "powershell.enableReferencesCodeLens": true,
+    /*
+
+    Sets the log verbosity for both the extension and its LSP server, PowerShell Editor Services. **Please set to `Diagnostic` when recording logs for a bug report!**
+
+        - Diagnostic: Enables all logging possible, please use this setting when submitting logs for bug reports!
+        - Verbose: Enables more logging than normal.
+        - Normal: The default logging level.
+        - Warning: Only log warnings and errors.
+        - Error: Only log errors.
+        - None: Disable all logging possible. No log files will be written!
+
+    */
+    "powershell.developer.editorServicesLogLevel": "Warning",
+}
