@@ -7,6 +7,28 @@ Created: '2023-06-11'
   desc: Official Pwsh docs for 5 through 7+
   tags: ['pwsh','official docs','tut']
 
+- folder: 'Dotnet Docs'
+  desc: Dotnet, Powershell, C#, cSharp
+  tags: ['pwsh','official docs','reference', 'csharp', 'dotnet', 'datatype']
+  items:
+    - name: System.Console
+      link: https://learn.microsoft.com/en-us/dotnet/api/System.Console?view=net-7.0
+    - related:
+      - https://learn.microsoft.com/en-us/dotnet/api/System.Console?view=net-7.0#Streams
+      - https://learn.microsoft.com/en-us/dotnet/api/System.Console?view=net-7.0#Unicode
+      - https://learn.microsoft.com/en-us/dotnet/api/System.Console?view=net-7.0#Buffer
+      - https://learn.microsoft.com/en-us/dotnet/api/system.console.readline?view=net-7.0#examples
+
+- folder: 'Speed Dial or References'
+  desc: references/cheatsheets/etc rather than articles
+  # tags: ['pwsh','official docs','tut']
+  parent: 'docs.powershell'
+  items:
+  - name: 'PowerShell Explained: All .Net Exceptions List'
+    link: https://powershellexplained.com/2017-04-07-all-dotnet-exception-list/
+    tags: ['pwsh', 'about_topics', 'docs', 'reference', 'exceptions', 'error-handling']
+
+
 - folder: 'Pwsh: About_Topic based tutorials'
   # desc: Official Pwsh docs for 5 to 7+
   # tags: ['pwsh','official docs','tut']

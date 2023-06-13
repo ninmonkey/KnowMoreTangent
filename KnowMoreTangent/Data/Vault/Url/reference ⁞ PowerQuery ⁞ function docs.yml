@@ -13,25 +13,21 @@ created: 2023-06
 - folder: RootToc
   items:
     - name: 'text'
-      children: *ref
+      # children: *ref_text
+      children: &ref_text
     - name: 'meta'
-      children: *ref
+      children: *ref_ungrouped
 
 - folder: Power Query Docs
-  items:  &ref
+  items:  &powerquery_root
     - url: https://docs.microsoft.com/en-us/power-query/
       desc: "Power Query docs"
       tags: ['📌', 'docs', 'reference', 'powerquery', 'microsoft']
       nested:
         - https://docs.microsoft.com/en-us/power-q
 
-- folder: Ungrouped
-  items:
-    - url: https://learn.microsoft.com/en-us/powerquery-m/expression-evaluate
-      title: Expression.Evaluate
-      tags: ['meta', 'eval', 'environment', '#shared', '#sections']
-      desc: Returns the result of evaluating an M expression document, with the available identifiers that can be referenced defined by environment.
-# ---
+- folder: Text
+  items: #*ref_text
     - url: https://learn.microsoft.com/en-us/powerquery-m/text-betweendelimiters
       title: Text.SplitAny
       tags: ['text', 'parse']
@@ -49,3 +45,12 @@ created: 2023-06
       tags: ['📌', 'docs', 'reference', 'powerquery', 'microsoft']
       nested:
         - https://docs.microsoft.com/en-us/power-q
+
+
+- folder: Ungrouped
+  items: &ref_ungrouped
+    - url: https://learn.microsoft.com/en-us/powerquery-m/expression-evaluate
+      title: Expression.Evaluate
+      tags: ['meta', 'eval', 'environment', '#shared', '#sections']
+      desc: Returns the result of evaluating an M expression document, with the available identifiers that can be referenced defined by environment.
+# ---
